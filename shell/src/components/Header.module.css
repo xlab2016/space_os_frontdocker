@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoIcon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  font-family: monospace;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.logoSubtitle {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navItem {
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.875rem;
+}
+
+.navItem:hover {
+  color: var(--color-accent);
+}
