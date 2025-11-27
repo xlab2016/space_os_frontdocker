@@ -1,0 +1,32 @@
+{
+  "name": "@frontdocker/livesdk-client",
+  "version": "1.0.0",
+  "description": "LiveSDK Client - Library for micro-frontends to integrate with FrontDocker Shell",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "keywords": [
+    "micro-frontend",
+    "frontdocker",
+    "livesdk",
+    "spaceos",
+    "mfe"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}

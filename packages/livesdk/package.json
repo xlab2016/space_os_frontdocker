@@ -1,0 +1,31 @@
+{
+  "name": "@frontdocker/livesdk",
+  "version": "1.0.0",
+  "description": "LiveSDK Host - Core library for FrontDocker Shell to manage micro-frontends",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "keywords": [
+    "micro-frontend",
+    "frontdocker",
+    "livesdk",
+    "spaceos"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}

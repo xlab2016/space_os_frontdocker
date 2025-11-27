@@ -1,0 +1,40 @@
+{
+  "name": "frontdocker-liveui",
+  "version": "1.0.0",
+  "description": "FrontDocker/LiveUI - Micro-frontend infrastructure for SpaceOS",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "shell",
+    "mfes/*"
+  ],
+  "scripts": {
+    "build": "npm run build:livesdk && npm run build:client && npm run build:shell && npm run build:mfes",
+    "build:livesdk": "cd packages/livesdk && npm run build",
+    "build:client": "cd packages/livesdk-client && npm run build",
+    "build:shell": "cd shell && npm run build",
+    "build:mfes": "npm run build:auth && npm run build:orders && npm run build:analytics",
+    "build:auth": "cd mfes/auth-mfe && npm run build",
+    "build:orders": "cd mfes/orders-mfe && npm run build",
+    "build:analytics": "cd mfes/analytics-mfe && npm run build",
+    "dev": "concurrently \"npm run dev:shell\" \"npm run dev:auth\" \"npm run dev:orders\" \"npm run dev:analytics\"",
+    "dev:shell": "cd shell && npm run dev",
+    "dev:auth": "cd mfes/auth-mfe && npm run dev",
+    "dev:orders": "cd mfes/orders-mfe && npm run dev",
+    "dev:analytics": "cd mfes/analytics-mfe && npm run dev",
+    "test": "npm run test:livesdk",
+    "test:livesdk": "cd packages/livesdk && npm test",
+    "lint": "cd shell && npm run lint"
+  },
+  "keywords": [
+    "micro-frontend",
+    "frontdocker",
+    "liveui",
+    "spaceos"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
